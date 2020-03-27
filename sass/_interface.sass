@@ -1,0 +1,113 @@
+.button
+  padding: 11px 24px
+  border: none
+  border-radius: 2px
+  text-transform: uppercase
+  font-size: 0.93rem
+  // border: 1px solid red
+  &:hover
+    cursor: pointer
+    background-color: $primary_btn
+    transition: background-color 0.3s
+  &--primary
+    width: 207px
+    height: 51px
+    background-color: $primary
+    color: $light
+    box-shadow:  0px 5px 15px rgba($primary, 0.2)
+    transition: box-shadow 0.3s
+    &:hover
+      box-shadow: none
+  &--outline
+    width: 207px
+    height: 51px
+    border: 1px solid #FFFFFF
+    background-color: transparent  
+    color: $light
+  &__text--primary
+    margin-right: 2rem
+  // &__text--outline
+.label
+  font-size: 1.07rem
+  &--light
+    color: rgba($light ,0.5)    
+.input
+  background-color: transparent
+  border: none
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3)
+  font-size: 1.285rem
+  color: $light
+  padding: 0.5rem 0
+  &--light
+    &::placeholder
+      color: $light
+  &--dark
+    color: $dark    
+
+.policy
+  &__checkbox
+    opacity: 0 
+    visibility: hidden
+    &:checked ~ .policy__label
+      &::before
+        background: $primary url('../img/check.svg') no-repeat center / 0.8rem
+  &__label
+    display: flex
+    align-items: center
+    &::before
+      content: ''
+      width: 18px
+      height: 18px
+      border: 1px solid $primary
+      border-radius: 1px
+      cursor: pointer
+      margin-right: 0.64rem
+    &--center
+      justify-content: center
+ 
+// label
+//   &.invalid
+//     color: $tomato
+// input
+//   &.invalid
+//     border-bottom: 1px solid $tomato
+// .invalid
+//   font-weight: 600
+//  !!!!!!!!!!!!!КРИК СИСТЕМЫ ОБ ОШИБКАХ!!!!!!!!
+div
+  &.invalid
+    color: $tomato
+input
+  &.invalid + .input--dark
+    color: $light
+    border-bottom: 1px solid $tomato
+  &.invalid + .input--light
+    color: $dark
+    border-bottom: 1px solid $tomato
+// .invalid
+//   font-weight: 600
+      // &::after
+    //   content: 'bug: не видно новый checkbox'
+    //   width: 90px
+    //   height: 2px
+    //   background-color: $primary
+    //   color: red
+    //   margin-left: 2rem
+      // border: 1px solid
+.buttonup
+  background: $primary url(../img/up.svg) no-repeat center / cover
+  width: 50px
+  height: 50px
+  color: #fff			
+  padding: 15px
+  margin: 20px
+  margin-top: 48rem
+  border-radius: 5px
+  transition: background-color .3s
+  &:hover 
+    cursor: pointer
+
+
+
+
+

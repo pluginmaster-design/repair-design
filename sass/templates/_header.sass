@@ -1,0 +1,58 @@
+.header
+  position: fixed
+  left: 0
+  right: 0
+  width: 100%
+  z-index: 99
+  background-color: $dark
+  padding: 24px 0
+.menu
+  display: flex
+  justify-content: space-between
+  align-items: center
+.logo
+  font-size: 1rem
+  letter-spacing: 0.56px
+  color: $primary
+  text-transform: uppercase
+  // font-family: 'FuturaDemiC', sans-serif
+  font-style: normal
+  font-weight: 700
+  line-height: 16px
+.nav
+  &__item
+   color: $light
+   text-decoration: none
+   text-transform: uppercase
+   margin-right: 2.5rem
+   transition: color 0.3s
+  //  animation-name: swing
+   &:hover
+    box-shadow:  10px 0px 15px 30px rgba($primary_btn, 0.2)
+    border-radius: 60%
+    transition: box-shadow 0.3s
+    color: $primary
+.phone
+  color: $primary
+  text-align: right
+  text-decoration-line: underline
+.contacts
+  // display: flex
+  // align-items: center
+  &__button
+    width: 161px
+    height: 37px 
+    // animation-name: bounce 
+  &__phone
+    margin-right: 45px
+    // font-family: 'FuturaDemiC', sans-serif
+    // font-style: normal
+    // font-weight: 500
+    // font-size: 1rem
+    // line-height: 16px
+    &:hover
+      box-shadow:  10px 0px 15px 30px rgba($primary_btn, 0.2)
+      border-radius: 60%
+      transition: box-shadow 0.3s
+      color: $primary
+     
