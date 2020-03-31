@@ -19,19 +19,19 @@ $(document).ready(function () {
     modalths.toggleClass('modalths--visible');
   });        
   	// Закрытие по клавише Esc.
-	// $(document).keydown(function(e) {
-	// 	if (e.keyCode === 27) {
-	// 		e.stopPropagation();
-	// 		$('.modal').toggleClass('modal--visible');
-	// 	}
-  // });
+	$(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$('.modal').removeClass('modal--visible');
+		}
+  });
     	// Закрытие по клавише Esc.
-	// $(document).keydown(function(e) {
-	// 	if (e.keyCode === 27) {
-	// 		e.stopPropagation();
-	// 		$('.modalths').toggleClass('modalths--visible');
-	// 	}
-	// });
+	$(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$('.modalths').removeClass('modalths--visible');
+		}
+	});
 	// Клик по фону, но не по окну.
 	$('.modal').click(function(e) {
 		if ($(e.target).closest('.modal__dialog').length == 0) {
