@@ -437,51 +437,50 @@ body {
 img {
   max-width: 100%; }
 
-.section {
-  padding: 60px; }
-  .section--dark {
-    background-color: #131313;
+.section--dark {
+  background-color: #131313;
+  color: #ffffff; }
+
+.section-title {
+  text-align: center; }
+  .section-title--left {
+    text-align: left; }
+  .section-title--light {
     color: #ffffff; }
-  .section-title {
-    text-align: center; }
-    .section-title--left {
-      text-align: left; }
-    .section-title--light {
-      color: #ffffff; }
-    .section-title__heading {
-      font-family: 'Yeseva One', cursive;
-      text-transform: uppercase;
-      line-height: 138%; }
-      .section-title__heading--primary {
-        color: #E3B873; }
-    .section-title__word {
-      display: block;
-      align-items: center; }
-      .section-title__word::after {
-        content: '';
-        display: inline-block;
-        width: 90px;
-        height: 2px;
-        font-size: 6px;
-        margin-bottom: 6px;
-        background-color: #E3B873;
-        margin-left: 2rem; }
-    .section-title__text {
-      font-size: 1.28rem;
-      line-height: 2.07rem;
-      max-width: 31.57rem; }
-    .section-title__image {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .section-title__image::before, .section-title__image::after {
-        content: '';
-        display: inline-block;
-        vertical-align: text-top;
-        width: 32px;
-        height: 2px;
-        background-color: #E3B873;
-        margin: 10px 10px 10px; }
+  .section-title__heading {
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    line-height: 138%; }
+    .section-title__heading--primary {
+      color: #E3B873; }
+  .section-title__word {
+    display: block;
+    align-items: center; }
+    .section-title__word::after {
+      content: '';
+      display: inline-block;
+      width: 90px;
+      height: 2px;
+      font-size: 6px;
+      margin-bottom: 6px;
+      background-color: #E3B873;
+      margin-left: 2rem; }
+  .section-title__text {
+    font-size: 1.28rem;
+    line-height: 2.07rem;
+    max-width: 31.57rem; }
+  .section-title__image {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .section-title__image::before, .section-title__image::after {
+      content: '';
+      display: inline-block;
+      vertical-align: text-top;
+      width: 32px;
+      height: 2px;
+      background-color: #E3B873;
+      margin: 10px 10px 10px; }
 
 .padding {
   padding-bottom: 20rem; }
@@ -1196,6 +1195,8 @@ to {
 @media screen and (max-width: 576px) {
   html {
     font-size: 12px !important; }
+  .container {
+    width: 100%; }
   .contacts__phone {
     color: #ffffff;
     margin: 0; }
