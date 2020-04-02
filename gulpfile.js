@@ -1,4 +1,4 @@
-const {src, dest, watch, } = require('gulp');
+const {src, dest, watch} = require('gulp');
 const browserSync = require('browser-sync').create();
 const sourcemaps = require ('gulp-sourcemaps');
 const sass = require('gulp-sass');

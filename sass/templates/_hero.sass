@@ -1,39 +1,35 @@
+
 .hero
   position: relative
   display: flex
-  padding-top: 84px
-  height: 100vh
+  flex-direction: column
+  justify-content: center
+  align-items: flex-start 
+  padding-top: 100px
+  background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
+  height: 90vh
   color: $light
-  &::after
-   content: ''
-   width: 100%
-   height: 3.46rem
-   position: absolute
-   bottom: 0
-   left: 0
-   background-color: $dark
-  &__content
-    position: relative
-    display: flex
-    flex-direction: column
-    justify-content: center
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
     width: 100%
-    padding-left: 4.28rem
-    background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
-    &::before
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      background-color: rgba($dark, 0.7)
-  &__title
+    height: 100%
+    background-color: rgba($dark, 0.7)
+  &::after
+    content: ''
+    width: 100%
+    height: 3.46rem
+    position: absolute
+    bottom: 0
+    left: 0
+    background-color: $dark
+  &__content
     margin-bottom: 1rem
     position: relative
     max-width: 35.714rem
   &__text
-    position: relative
     line-height: 131%
     font-size: 1.57rem
     max-width: 35.7142rem
@@ -46,10 +42,13 @@
     padding: 20px 35px
   &__buttons
     margin-top: 0.5rem
-    // border: 1px solid green
   &__instagram
+    position: absolute
+    left: 0
+    top: 0
     max-width: 80px
     height: 100%
+    // КНОПКА ПРОКРУТКИ ВНИЗ
   &__scroll-down
     position: absolute
     display: flex
@@ -80,7 +79,7 @@
       background: url("../img/arrow-down.svg") no-repeat center
       width: 30px
       height: 30px
-      border: 2px solid $primary
+      border: 2px solid #E3B873
       border-radius: 50%
       margin-left: 17px
 .instagram
@@ -93,7 +92,7 @@
     display: flex
     align-items: center
     text-transform: uppercase
-    color: $primary
+    color: #E3B873
     text-decoration: none
     transform: rotate(90deg)
     line-height: 0.8
@@ -109,7 +108,7 @@
       content: ''
       width: 50px
       height: 1px
-      background-color: $primary
+      background-color: #E3B873
       margin-left: 8px
         // transition: color 0.2s  
 .title
@@ -119,5 +118,4 @@
   font-size: 2.857rem
   line-height: 1.4
   &--primary
-    color: $primary
-
+    color: #E3B873

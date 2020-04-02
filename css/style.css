@@ -410,7 +410,8 @@ input.invalid + .input--light {
 .container {
   width: 85%;
   max-width: 1256px;
-  margin: auto; }
+  margin: auto;
+  border: 1px solid #ee0d0d; }
 
 .row {
   display: flex;
@@ -577,11 +578,6 @@ img {
   text-transform: uppercase; }
 
 .header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 99;
   background-color: #131313;
   padding: 24px 0; }
 
@@ -591,44 +587,39 @@ img {
   align-items: center; }
 
 .logo {
-  font-size: 1rem;
-  letter-spacing: 0.56px;
   color: #E3B873;
-  text-transform: uppercase;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 16px; }
+  text-transform: uppercase; }
 
 .nav__item {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 2.5rem;
-  transition: color 0.3s; }
+  margin-right: 40px; }
 
 .phone {
-  color: #E3B873;
-  text-align: right;
-  text-decoration-line: underline; }
-
-.contacts__button {
-  width: 161px;
-  height: 37px; }
+  color: #E3B873; }
 
 .contacts__phone {
   margin-right: 45px; }
-  .contacts__phone:hover {
-    box-shadow: 10px 0px 15px 30px rgba(224, 167, 75, 0.2);
-    border-radius: 60%;
-    transition: box-shadow 0.3s;
-    color: #E3B873; }
 
 .hero {
   position: relative;
   display: flex;
-  padding-top: 84px;
-  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  height: 90vh;
   color: #ffffff; }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 19, 0.7); }
   .hero::after {
     content: '';
     width: 100%;
@@ -638,27 +629,10 @@ img {
     left: 0;
     background-color: #131313; }
   .hero__content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    padding-left: 4.28rem;
-    background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover; }
-    .hero__content::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(19, 19, 19, 0.7); }
-  .hero__title {
     margin-bottom: 1rem;
     position: relative;
     max-width: 35.714rem; }
   .hero__text {
-    position: relative;
     line-height: 131%;
     font-size: 1.57rem;
     max-width: 35.7142rem;
@@ -672,6 +646,9 @@ img {
   .hero__buttons {
     margin-top: 0.5rem; }
   .hero__instagram {
+    position: absolute;
+    left: 0;
+    top: 0;
     max-width: 80px;
     height: 100%; }
   .hero__scroll-down {
@@ -831,84 +808,80 @@ img {
   margin-top: -35.7rem;
   background-color: #131313; }
 
-.card__revers {
-  display: flex; }
-
-.card__icon {
-  margin-top: -34rem;
-  margin-left: -4rem; }
-
-.card__text {
-  position: relative;
-  max-width: 23.6rem;
-  margin: 0 auto;
-  margin-top: -9.3rem;
-  padding: 1.79rem 2.14rem;
-  background-color: #fff;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
-  .card__text--team {
+.card {
+  border: 1px solid #eb1313; }
+  .card__revers {
+    display: flex; }
+  .card__icon {
+    margin-top: -34rem;
+    margin-left: -4rem; }
+  .card__text {
     position: relative;
-    max-width: 16.6428rem;
+    max-width: 23.6rem;
     margin: 0 auto;
-    margin-top: -5.3rem;
+    margin-top: -9.3rem;
     padding: 1.79rem 2.14rem;
     background-color: #fff;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
-
-.card__title {
-  font-family: 'Yeseva One', cursive;
-  font-size: 1.29rem;
-  margin-top: 0;
-  margin-bottom: 0.7rem; }
-  .card__title--fonts {
+    .card__text--team {
+      position: relative;
+      max-width: 16.6428rem;
+      margin: 0 auto;
+      margin-top: -5.3rem;
+      padding: 1.79rem 2.14rem;
+      background-color: #fff;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+  .card__title {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.29rem;
+    margin-top: 0;
+    margin-bottom: 0.7rem; }
+    .card__title--fonts {
+      margin: 0;
+      padding: 0;
+      margin-bottom: -2rem;
+      padding-bottom: 0.7rem;
+      font-family: 'Yeseva One', cursive; }
+    .card__title--team {
+      text-align: center; }
+  .card__list {
+    padding: 0 0 0 0.3rem;
     margin: 0;
-    padding: 0;
-    margin-bottom: -2rem;
-    padding-bottom: 0.7rem;
-    font-family: 'Yeseva One', cursive; }
-  .card__title--team {
-    text-align: center; }
-
-.card__list {
-  padding: 0 0 0 0.3rem;
-  margin: 0;
-  font-size: 1.07rem;
-  line-height: 1.79rem;
-  color: #959595;
-  margin-bottom: 2.5rem; }
-  .card__list li {
-    list-style-type: none; }
-
-.card__pricetag {
-  position: absolute;
-  left: 0;
-  bottom: -1.79rem;
-  font-size: 1.29rem;
-  font-family: 'Yeseva One', cursive;
-  text-transform: uppercase;
-  background-color: #E3B873;
-  color: #ffffff;
-  padding: 1.214rem 2.6rem; }
-  .card__pricetag--design {
-    width: 16.3rem;
-    height: 3.857rem; }
-  .card__pricetag--team {
+    font-size: 1.07rem;
+    line-height: 1.79rem;
+    color: #959595;
+    margin-bottom: 2.5rem; }
+    .card__list li {
+      list-style-type: none; }
+  .card__pricetag {
     position: absolute;
-    text-align: center;
     left: 0;
-    bottom: -0.1rem;
+    bottom: -1.79rem;
+    font-size: 1.29rem;
+    font-family: 'Yeseva One', cursive;
     text-transform: uppercase;
     background-color: #E3B873;
     color: #ffffff;
-    padding: 1.214rem 3.16rem;
-    font-family: 'Yeseva One', cursive;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 20px; }
-
-.card__item--team {
-  text-align: center; }
+    padding: 1.214rem 2.6rem; }
+    .card__pricetag--design {
+      width: 16.3rem;
+      height: 3.857rem; }
+    .card__pricetag--team {
+      position: absolute;
+      text-align: center;
+      left: 0;
+      bottom: -0.1rem;
+      text-transform: uppercase;
+      background-color: #E3B873;
+      color: #ffffff;
+      padding: 1.214rem 3.16rem;
+      font-family: 'Yeseva One', cursive;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 20px; }
+  .card__item--team {
+    text-align: center; }
 
 h3 {
   margin-block-start: 0;
@@ -1186,55 +1159,13 @@ to {
     justify-content: center;
     align-items: center; }
 
-@media screen and (min-width: 1920px) {
-  .logo {
-    margin-left: -245px; } }
-
-@media screen and (max-width: 1920px) {
-  .logo {
-    margin-left: -245px; } }
-
-@media screen and (max-width: 1860px) {
-  .logo {
-    margin-left: -218px; } }
-
-@media screen and (max-width: 1820px) {
-  .logo {
-    margin-left: -195px; } }
-
-@media screen and (max-width: 1760px) {
-  .logo {
-    margin-left: -165px; } }
-
-@media screen and (max-width: 1720px) {
-  .logo {
-    margin-left: -145px; } }
-
-@media screen and (max-width: 1650px) {
-  .logo {
-    margin-left: -112px; } }
-
-@media screen and (max-width: 1620px) {
-  .logo {
-    margin-left: -100px; } }
-
-@media screen and (max-width: 1560px) {
-  .logo {
-    margin-left: -69px; } }
-
-@media screen and (max-width: 1520px) {
-  .logo {
-    margin-left: -45px; } }
-
-@media screen and (max-width: 1438px) {
-  .logo {
-    margin-left: -25px; } }
-
 @media screen and (max-width: 1200px) {
   .logo {
     margin-left: -5px; }
   html {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .card__icon {
+    margin-top: -39rem; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -1250,7 +1181,11 @@ to {
   .card {
     margin-bottom: 5rem; }
     .card__text {
-      margin-left: 0; } }
+      margin-left: 0; }
+    .card--one {
+      margin-bottom: 37rem !important; }
+    .card--two {
+      margin-bottom: 37rem !important; } }
 
 @media screen and (mах-width: 768px) {
   html {
@@ -1308,14 +1243,6 @@ to {
     font-size: 16px; }
   .header {
     min-height: 85px !important; } }
-
-.box {
-  width: 200px;
-  height: 200px;
-  z-index: 9999;
-  background-color: #E3B873;
-  animation-name: slideRight;
-  animation-duration: 3s; }
 
 .ymaps-layers-pane {
   filter: grayscale(1);
