@@ -485,7 +485,8 @@ img {
   padding-bottom: 20rem; }
 
 .projects {
-  padding-bottom: 30rem; }
+  padding-bottom: 30rem;
+  background: #131313 url("../img/bg-lines-1.svg") no-repeat center/cover; }
 
 .swiper-slide {
   display: flex;
