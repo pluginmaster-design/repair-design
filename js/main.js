@@ -299,6 +299,7 @@ $(document).ready(function () {
       myMap.geoObjects
           .add(myPlacemark)
           .add(myPlacemarkWithContent);
+          myMap.behaviors.disable('scrollZoom');
   });
 });
 //КНОПКА  НАВЕРХ
